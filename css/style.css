@@ -20,7 +20,7 @@ body {
 }
 
 .todo-wrapper {
-	max-width: 98%;
+	max-width: 95%;
 	margin: 1rem auto;
 	border: 1rem solid rgba(0,0,0,0.3);
 	background-color: #bad;
