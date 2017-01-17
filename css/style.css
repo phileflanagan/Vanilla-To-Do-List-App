@@ -1,0 +1,141 @@
+body {
+	background-color: #badbad;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 200;
+	font-family: 'helvetica neue';
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid red;
+	min-height: 100vh;
+}
+
+.todo-wrapper {
+	max-width: 480px;
+	margin: 1rem auto;
+	border: 1rem solid rgba(0,0,0,0.3);
+	background-color: #bad;
+}
+
+.todo-wrapper h1 {
+	margin: 0.5rem;
+	text-align: center;
+	color: #badbad;
+}
+
+.items {
+	border-top: 2px solid #badbad;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.items > li {
+	border-bottom: 1px solid #ccc;
+}
+
+.items > li:last-child {
+	border-bottom: none;
+}
+
+.items > li input {
+	display: none;
+}
+
+.items > li label {
+	display: block;
+	padding: 0.5rem;
+	color: white;
+}
+
+.items > li input:checked + label {
+	text-decoration: line-through;
+	color: #ddd;
+}
+
+.add-item {
+	border-top: 2px solid #badbad;
+	display: flex;
+}
+
+.add-item input {
+	background-color: transparent;
+	height: 40px;
+	border: none;
+	padding: 0.5rem;
+	color: white;
+	flex-grow: 1;
+}
+
+.add-item button {
+	height: 40px;
+	border: none;
+	background-color: #badbad;
+	color: #eee;
+	padding: 0.5rem;
+	flex-grow: 1;
+}
+
+.add-item button:hover {
+	background-color: #a0cc8f;
+	color: white;
+}
+
+.options {
+	border-top: 2px solid #badbad;
+	display: flex;
+}
+
+.options button {
+	flex-grow: 1;
+	background-color: #badbad;
+	border: none;
+	color: #eee;
+	padding: 0.5rem;
+	text-transform: uppercase;
+	font-size: 0.6rem;
+	letter-spacing: 1px;
+}
+
+.options button:hover {
+	background-color: #a0cc8f;
+}
+
+.options span {
+	padding: 0.5rem;
+	text-transform: uppercase;
+	font-size: 0.6rem;
+	letter-spacing: 1px;
+	color: #eee;
+}
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #e0e0e0;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #e0e0e0;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #e0e0e0;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #e0e0e0;
+}
+
+input:focus {
+	outline: none;
+	background-color: rgba(0,0,0,0.1)
+}
