@@ -29,13 +29,24 @@ function populateList(items = {}, itemsList) {
       <li>
         <input type="checkbox" data-index=${i} id="item-${i}" ${(item.done) ? 'checked' : ''} />
         <label for="item-${i}">${item.text}</label>
+				<span data-index=${i} >&times;</span>
       </li>
     `
   }).join('');
 }
 
+function deleteThis(el) {
+	const index = el.dataset.index;
+	items.splice(index, 1);
+	populateList(items, itemsList);
+}
+
 function toggleDone(e) {
+	// Handle Delete
+	if (e.target.matches('span')) deleteThis(e.target);
+	// Make Sure They Are Clicking An Input/Label
   if (!e.target.matches('input')) return;
+	// Handle checking
   const el = e.target;
   const index = el.dataset.index;
   items[index].done = !items[index].done;
