@@ -12,15 +12,15 @@ body {
 }
 
 .container {
+	max-width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid red;
 	min-height: 100vh;
 }
 
 .todo-wrapper {
-	max-width: 480px;
+	max-width: 98%;
 	margin: 1rem auto;
 	border: 1rem solid rgba(0,0,0,0.3);
 	background-color: #bad;
